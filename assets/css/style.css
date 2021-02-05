@@ -1,0 +1,529 @@
+/*==============================
+	Common styles
+==============================*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins'!important;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+a {
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+
+a:hover, a:active, a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+input, textarea, select {
+    padding: 0;
+    margin: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+::-moz-selection {
+    background: #fff;
+    color: #000;
+    text-shadow: none;
+}
+
+::selection {
+    background: #fff;
+    color: #000;
+    text-shadow: none;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.tab-content>.tab-pane {
+    display: none;
+}
+
+.tab-content>.active {
+    display: block;
+}
+
+.fade {
+    -webkit-transition: opacity 0.25s linear;
+    -moz-transition: opacity 0.25s linear;
+    transition: opacity 0.25s linear;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .fade {
+        -webkit-transition: none;
+        -moz-transition: none;
+        transition: none;
+    }
+}
+
+.fade:not(.show) {
+    opacity: 0;
+}
+
+.collapse:not(.show) {
+    display: none;
+}
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.4s ease;
+    -moz-transition: height 0.4s ease;
+    transition: height 0.4s ease;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .collapsing {
+        -webkit-transition: none;
+        -moz-transition: none;
+        transition: none;
+    }
+}
+
+/* 
+.b-description_readmore_button {
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    width: 100%;
+    position: relative;
+} */
+
+/* .b-description_readmore_button:before {
+    content: '\f1c8';
+    font-family: "Ionicons";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 22px;
+    line-height: 24px;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    transition: 0.4s ease;
+} */
+
+/* .b-description_readmore_button:hover:before, .b-description_readmore_button.b-description_readmore_button_active:before {
+    color: #ff55a5;
+} */
+
+/* .body:before {
+    content: '';
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: rgba(43, 43, 49, 0.75);
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    transition: 0.4s ease;
+} */
+
+/* .body--active:before {
+    z-index: 99;
+    opacity: 1;
+    pointer-events: auto;
+} */
+
+/*==============================
+	Fonts
+==============================*/
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/assets/fonts/Poppins-Light.ttf") format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/assets/fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/assets/fonts/Poppins-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*==============================
+	Colors
+==============================*/
+
+.color-1 {
+    color: #F5F7FF;
+}
+
+.color-5 {
+    color: #8C8C8C;
+}
+
+.color-6 {
+    color: #CCCCCC;
+}
+
+/*==============================
+	Shadow
+==============================*/
+
+.shadow1 {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.14);
+}
+
+/*==============================
+	Hovers
+==============================*/
+
+.hover1 {}
+
+/*==============================
+	Custom design
+==============================*/
+
+.flex-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+}
+
+.link-underline {
+    display: inline-block;
+    position: relative;
+}
+
+.link-underline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.dropdown-arrow {
+    position: relative;
+}
+
+.dropdown-arrow::after {
+    content: url(/assets/icons/arrow-down.svg);
+    position: absolute;
+    top: -2px;
+    right: -10px;
+    width: 4px;
+    height: 6px;
+}
+
+/*==============================
+	Shopping Card
+==============================*/
+
+.mobile__shopping-card {
+    position: relative;
+}
+
+.mobile__shopping-card .shopping-card__badge {
+    display: inline-block;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 15px;
+    right: -8px;
+    font-size: 10px;
+}
+
+/*==============================
+	Input
+==============================*/
+
+::placeholder {
+    /* color-6 */
+    color: #CCCCCC;
+    font-size: 11px;
+}
+
+.search-input {
+    position: relative;
+    display: flex;
+    width: 100%;
+    /* max-width: 170px; */
+    border-radius: 25px;
+    background-color: #fff;
+    padding: 0px 15px;
+    margin-left: 5px;
+}
+
+.search-input input[type='text'] {
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    padding: 11px 0px;
+}
+
+/* @media (min-width: 360px) {
+    .search-input {
+        max-width: 210px;
+    }
+} */
+
+/* @media (min-width: 480px) {
+    .search-input {
+        max-width: 330px;
+    }
+}
+
+@media (min-width: 640px) {
+    .search-input {
+        max-width: 330px;
+    }
+} */
+
+/*==============================
+	Button
+==============================*/
+
+.search-input button[type='submit'] {
+    margin-right: 8px;
+}
+
+/*==============================
+	Header
+==============================*/
+
+.header .header-top {
+    background-color: #020202;
+    z-index: 101;
+    font-size: 11px;
+    padding: 11px 0px;
+}
+
+.header__mobile-logo {
+    width: 50px;
+}
+
+.header__mobile-logo .wrapper {
+    position: absolute;
+    top: -5px;
+    width: 55px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0156ff;
+}
+
+.header__mobile-logo .wrapper img {
+    position: absolute;
+    width: 18px;
+    height: 23px;
+    top: 10px;
+    left: 18px;
+}
+
+.header__working-hours {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__working-hours span {
+    margin-left: 5px;
+}
+
+.header__address {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 2px;
+}
+
+.header__address .content {
+    /* display: none; */
+    margin-right: 5px;
+}
+
+.header__contact {
+    text-align: right;
+}
+
+.header__contact ul.socials {
+    display: inline-block;
+}
+
+.header__contact ul.socials li {
+    display: inline;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+/* header main */
+
+.header .header-main {
+    z-index: 101;
+    font-size: 11px;
+}
+
+/* header mobile */
+
+.header .header-main .header__mobile {
+    padding: 13px 0px;
+    background-color: #0156FF;
+}
+
+/* .header__mobile_wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+} */
+
+ul.header__mobile__icons {
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
+}
+
+ul.header__mobile__icons li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.mobile__nav_btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* @media (min-width: 768px) {
+    ul.header__mobile__icons li {
+        margin-left: 15px;
+    }
+} */
+
+.test1 {
+    width: 100%;
+    height: 50px;
+    background-color: yellow;
+}
+
+.test2 {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+}
+
+.test3 {
+    width: 100%;
+    height: 50px;
+    background-color: green;
+}
+
+/* desktop */
+
+@media only screen and (min-width: 1200px) {
+    .header .header-top {
+        font-size: 12px;
+        padding: 11px 0px;
+    }
+    .header .header-main {
+        padding: 10px 0px;
+    }
+    /* .header__wrapper .header__working-hours {
+        margin-left: 0;
+    } */
+    .header__address {
+        justify-content: flex-start;
+    }
+    /* .header__wrapper .header__contact {
+        display: block;
+    } */
+}
+
+/*==============================
+	Breakpoints
+==============================*/
+
+@media (max-width: 320px) {
+    .header .header-top {
+        font-size: 9px;
+    }
+}
