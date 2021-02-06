@@ -564,6 +564,12 @@ ul.header__mobile__icons li {
 
 /* header__mobile end*/
 
+@media (max-width: 320px) {
+    .header .header-top {
+        font-size: 9px;
+    }
+}
+
 /* desktop */
 
 @media only screen and (min-width: 1200px) {
@@ -606,7 +612,7 @@ section#home-slider {
 
 /* custom swipper style  */
 
-.home__slider-btn {
+.custom__slider-btn {
     width: 27px;
     height: 36px;
     font-size: 2px;
@@ -640,7 +646,7 @@ section#home-slider {
 @media (min-width: 728px) {
     section#home-slider {
         padding-top: 19px;
-        padding-bottom: 19px;
+        padding-bottom: 5px;
     }
     .home__slider_wrapper {
         height: 173px;
@@ -648,13 +654,13 @@ section#home-slider {
 }
 
 @media (min-width: 992px) {
+    section#home-slider {
+        padding-bottom: 19px;
+    }
     .home__slider_wrapper {
         height: 328px;
     }
-    section#home-slider {
-        padding-top: 0px;
-    }
-    .home__slider-btn {
+    .custom__slider-btn {
         width: 36px;
         height: 48px;
     }
@@ -664,11 +670,67 @@ section#home-slider {
 }
 
 /*==============================
-	Breakpoints
+	Section
 ==============================*/
 
-@media (max-width: 320px) {
-    .header .header-top {
-        font-size: 9px;
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 13px;
+}
+
+.section-header .section-header__title {}
+
+.section-header .section-header__title h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.section-header .section-header__action {}
+
+.section-header .section-header__action a {
+    font-size: 10px;
+    color: #000;
+}
+
+.section-header .section-header__action a.link-underline::before {
+    background-color: #000;
+    bottom: 1px;
+}
+
+@media (min-width: 992px) {
+    .section-header {
+        padding-bottom: 14px;
+    }
+    .section-header .section-header__title h3 {
+        font-size: 22px;
+    }
+    .section-header .section-header__action a {
+        font-size: 13px;
+    }
+}
+
+/*==============================
+	Product Slider
+==============================*/
+
+section#product-slider {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+@media (min-width: 768px) {
+    section#product-slider {
+        padding-top: 11px;
+        /* padding-bottom: 7px; */
+    }
+}
+
+@media (min-width: 992px) {
+    section#product-slider {
+        padding-top: 18px;
+        /* padding-bottom: 7px; */
     }
 }
