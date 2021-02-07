@@ -11,23 +11,23 @@ $(document).ready(function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        breakpoints: {
-            320: {
-                slidesPerView: 2,
-                spaceBetween: 0,
-            },
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 0,
-            },
-            992: {
-                slidesPerView: 4,
-                spaceBetween: 0,
-            },
-            1200: {
-                slidesPerView: 5,
-                spaceBetween: 0,
-            }
-        }
+        // breakpoints: {
+        //     320: {
+        //         slidesPerView: 2,
+        //         spaceBetween: 0,
+        //     },
+        //     768: {
+        //         slidesPerView: 3,
+        //         spaceBetween: 0,
+        //     },
+        //     992: {
+        //         slidesPerView: 4,
+        //         spaceBetween: 0,
+        //     },
+        //     1200: {
+        //         slidesPerView: 5,
+        //         spaceBetween: 0,
+        //     }
+        // }
     });
 });
