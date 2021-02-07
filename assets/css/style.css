@@ -946,7 +946,7 @@ section#product-slider {
 
 @media (min-width: 992px) {
     .product-card {
-        padding: 10px 15px;
+        padding: 10px 25px;
     }
     .product-card .card .card-body .card__old-price {
         font-size: 14px;
@@ -1068,4 +1068,95 @@ section#content {}
     width: 100%;
     height: 100px;
     background-color: green;
+}
+
+/*==============================
+	Grid for 7 col
+==============================*/
+
+@media (min-width: 768px) {
+    .seven-cols .col-md-1, .seven-cols .col-sm-1, .seven-cols .col-lg-1 {
+        width: 100%;
+        *width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .seven-cols .col-md-1, .seven-cols .col-sm-1, .seven-cols .col-lg-1 {
+        width: 14.285714285714285714285714285714%;
+        *width: 14.285714285714285714285714285714%;
+        max-width: 14.285714285714285714285714285714% !important;
+        flex: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .seven-cols .col-md-1, .seven-cols .col-sm-1, .seven-cols .col-lg-1 {
+        width: 14.285714285714285714285714285714%;
+        *width: 14.285714285714285714285714285714%;
+        max-width: 14.285714285714285714285714285714% !important;
+        flex: none !important;
+    }
+}
+
+/*==============================
+	Brands
+==============================*/
+
+section#brands {
+    padding-top: 15px;
+}
+
+.brand-img__wrapper {
+    position: relative;
+    padding: 25px 23px;
+}
+
+.brand-img__wrapper img{
+    width: 100%;
+}
+
+.brand-img__wrapper img.brand__img_main {
+    display: block;
+}
+
+.brand-img__wrapper img.brand__hover_img {
+    display: none;
+}
+
+.brand__overlay {
+    background: #EBEBEB;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+}
+
+.brand-img__wrapper:hover .brand__overlay{
+    opacity: .5;
+}
+
+.brand-img__wrapper:hover img.brand__img_main{
+    display: none !important;
+}
+
+.brand-img__wrapper:hover img.brand__hover_img{
+    display: block !important;
+}
+
+@media (min-width: 768px) {
+    .brand-img__wrapper {
+        padding: 35px 44px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .brand-img__wrapper {
+        padding: 35px 24px;
+    }
 }
