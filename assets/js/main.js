@@ -14,19 +14,19 @@ $(document).ready(function () {
         breakpoints: {
             320: {
                 slidesPerView: 2,
-                spaceBetween: 20,
+                spaceBetween: 0,
             },
             768: {
                 slidesPerView: 3,
-                spaceBetween: 40,
+                spaceBetween: 0,
             },
             992: {
                 slidesPerView: 4,
-                spaceBetween: 45,
+                spaceBetween: 0,
             },
             1200: {
                 slidesPerView: 6,
-                spaceBetween: 50,
+                spaceBetween: 0,
             }
         }
     });

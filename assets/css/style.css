@@ -680,15 +680,11 @@ section#home-slider {
     padding-bottom: 13px;
 }
 
-.section-header .section-header__title {}
-
 .section-header .section-header__title h3 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 0;
 }
-
-.section-header .section-header__action {}
 
 .section-header .section-header__action a {
     font-size: 10px;
@@ -733,4 +729,78 @@ section#product-slider {
         padding-top: 18px;
         /* padding-bottom: 7px; */
     }
+}
+
+/*==============================
+	Product Card
+==============================*/
+
+.product-card {
+    width: 100%;
+    padding: 5px 15px;
+    position: relative;
+}
+
+.product-card .card {
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.product-card .card .product-card__header {
+    width: 100px;
+    height: 100px;
+}
+
+.product-card .card .product-card__header {
+    width: 100px;
+    object-fit: cover;
+    margin-bottom: 3px;
+}
+
+.product-card .card .card-body {
+    padding: 0;
+}
+
+.product-card .card .card-body .card-feedback {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+.product-card .card .card-body .card-feedback .stars {
+    display: flex;
+    align-items: center;
+}
+
+.product-card .card .card-body .card-feedback .stars img {
+    width: 9px;
+}
+
+.product-card .card .card-body .card-feedback .reviews {
+    font-size: 10px;
+    margin-left: 7px;
+}
+
+.product-card .card .card-body .card-text {
+    font-size: 11px;
+    line-height: 16px;
+    color: #000 !important;
+}
+
+.product-card .card .card-body .card__old-price {
+    display: block;
+    font-size: 12px;
+    line-height: 140%;
+    color: #666666;
+    margin-bottom: 3px;
+}
+
+.product-card .card .card-body .card__price {
+    display: block;
+    font-size: 14px;
+    line-height: 140%;
+    color: #000;
+    font-weight: bold;
 }
