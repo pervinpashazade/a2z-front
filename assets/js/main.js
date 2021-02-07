@@ -25,7 +25,7 @@ $(document).ready(function () {
                 spaceBetween: 0,
             },
             1200: {
-                slidesPerView: 6,
+                slidesPerView: 5,
                 spaceBetween: 0,
             }
         }
