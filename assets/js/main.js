@@ -19,8 +19,8 @@ $(document).ready(function () {
                 spaceBetween: 0,
             },
             1200: {
-                slidesPerView: 5,
-                spaceBetween: -10,
+                slidesPerView: 6,
+                spaceBetween: 0,
             }
         }
     });
