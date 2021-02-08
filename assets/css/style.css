@@ -261,6 +261,12 @@ ul {
 	Custom design
 ==============================*/
 
+@media only screen and (min-width: 992px) {
+    .px-lg-100{
+        padding: 0px 100px !important;
+    }
+}
+
 .flex-end {
     display: flex;
     align-items: center;
@@ -392,6 +398,7 @@ ul {
 
 @media only screen and (min-width: 1200px) {
     .btn-custom-outline {
+        border: 2px solid;
         padding: 6px 23px !important;
         font-size: 12px;
         line-height: 21px;
@@ -1168,6 +1175,7 @@ section#brands {
 ==============================*/
 
 section#features {
+    padding-top: 5px;
     padding-bottom: 25px;
 }
 
@@ -1202,6 +1210,9 @@ section#features {
 }
 
 @media (min-width: 768px) {
+    section#features {
+        padding-top: 30px;
+    }
     .features-card {
         padding: 0px 10px;
         margin-top: 0;
@@ -1209,8 +1220,11 @@ section#features {
 }
 
 @media (min-width: 992px) {
+    section#features {
+        padding-top: 60px;
+    }
     .features-card {
-        padding: 0px 45px;
+        padding: 0px 30px;
     }
     .features-card img {
         width: 65px;
@@ -1232,11 +1246,11 @@ section#features {
 
 section#instagram-posts {
     padding-top: 43px;
-    padding-bottom: 57px;
 }
 
 .instagram-post__card {
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .instagram-post__card .card {
@@ -1259,4 +1273,142 @@ section#instagram-posts {
     font-size: 10px;
     line-height: 15px;
     margin-bottom: 0;
+}
+
+/*==============================
+	Testimonial
+==============================*/
+
+section#testimonial {
+    padding-top: 15px;
+}
+
+.testimonial-box {
+    padding: 25px 12px 27px 19px;
+    background-color: #F5F9FF;
+}
+
+.testimonial-box .testimonial__body {
+    position: relative;
+    padding-left: 41px;
+    padding-bottom: 10px;
+    color: #000000
+}
+
+.testimonial-box .testimonial__body::before {
+    content: '‘’';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    font-size: 52px;
+    line-height: 78px;
+}
+
+.testimonial-box .testimonial__body p.item__text {
+    margin-bottom: 5px;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.testimonial-box .testimonial__body p.item__author {
+    margin-bottom: 5px;
+    text-align: right;
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.testimonial-box .testimonial__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.testimonial-box .testimonial__footer a {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+}
+
+.testimonial__footer .swiper-pagination {
+    right: 0;
+}
+
+.testimonial__footer .swiper-pagination span {
+    width: 9px;
+    height: 9px;
+    margin-left: 8px;
+}
+
+/* .swiper-pagination-bullet {
+    background-color: #CCCCCC !important;
+    background: #CCCCCC !important;
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff !important;
+    border: 0;
+} */
+
+@media (min-width: 768px) {
+    section#testimonial {
+        padding-top: 17px;
+    }
+    .testimonial-box {
+        padding: 34px 42px 29px 19px;
+    }
+    .testimonial-box .testimonial__body p.item__text {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    section#testimonial {
+        padding-top: 57px;
+    }
+    .testimonial-box {
+        padding: 49px 119px 56px 119px;
+    }
+    .testimonial-box .testimonial__body {
+        padding-left: 72px;
+        padding-bottom: 22px;
+    }
+    .testimonial-box .testimonial__body::before {
+        content: '‘’';
+        position: absolute;
+        top: -30px;
+        left: 0;
+        font-size: 96px;
+        line-height: 144px;
+    }
+    .testimonial-box .testimonial__body p.item__text {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 27px;
+    }
+    .testimonial-box .testimonial__body p.item__author {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .testimonial__footer .swiper-pagination span {
+        width: 12px;
+        height: 12px;
+        margin-left: 10px;
+    }
+}
+
+/*==============================
+	Footer
+==============================*/
+
+.footer {
+    height: 300px;
+    padding-top: 47px;
+    color: #fff;
+    background-color: #020203;
+}
+
+.footer__bottom {
+    font-size: 12px;
 }

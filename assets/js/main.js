@@ -18,14 +18,26 @@ $(document).ready(function () {
                 slidesPerView: 3,
                 spaceBetween: 0,
             },
-            // 992: {
-            //     slidesPerView: 4,
-            //     spaceBetween: 0,
-            // },
             1200: {
                 slidesPerView: 5,
                 spaceBetween: -10,
             }
+        }
+    });
+
+    var testimonialSlider = new Swiper('.swiper-container.testimonial', {
+        slidesPerView: 1,
+        mousewheel: {
+            enable: true
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            // dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         }
     });
 });
