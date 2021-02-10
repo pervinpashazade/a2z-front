@@ -1216,6 +1216,8 @@ section#content {
     margin-left: 4.166666667%
 }
 
+.content-items {}
+
 .swiper-container.content-items {
     overflow: hidden;
 }
@@ -1246,18 +1248,28 @@ section#content {
         right: 0;
         bottom: 0;
     }
-    .content-banner{
+    .content-banner {
         height: 100%;
         cursor: pointer;
-    } 
+    }
     .content-banner .content-banner__title {
-        padding: 30px;
+        padding: 40px;
     }
     .content-banner .content-banner__action {
         position: absolute;
         bottom: 30px;
     }
 }
+
+/* ipad pro */
+
+/* Landscape*/
+
+@media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
+
+/* Portrait*/
+
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
 
 .test1 {
     width: 100%;
@@ -1269,6 +1281,49 @@ section#content {
     width: 100%;
     height: 100px;
     background-color: green;
+}
+
+/*==============================
+	Nav Tab (customized)
+==============================*/
+
+.custom-nav-tab {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 14px;
+}
+
+.custom-nav-tab .nav-item {
+    margin-right: 16px;
+}
+
+.custom-nav-tab .nav-item .nav-link {
+    color: #838383;
+    border: none;
+    padding: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.custom-nav-tab .nav-item .nav-link.active {
+    color: #000;
+    border-bottom: 2px solid #0156FF;
+}
+
+@media (min-width: 728px) {
+    .custom-nav-tab .nav-item {
+        margin-right: 19px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-nav-tab {
+        font-size: 16px;
+    }
+    .custom-nav-tab .nav-item {
+        margin-right: 25px;
+    }
 }
 
 /*==============================
