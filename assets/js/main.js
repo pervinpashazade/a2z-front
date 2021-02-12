@@ -58,38 +58,77 @@ $(document).ready(function () {
         }
     });
 
-    var tabs1 = document.querySelectorAll(".content-nav-tab li");
+    var tabs = document.querySelectorAll('.content-nav-tab li');
 
-    var GS_Series = document.querySelectorAll('.content-nav-tab[data-content="Laptops"] .gs');
-    var GT_Series = document.querySelectorAll('.content-nav-tab[data-content="Laptops"] .gt');
-    var GL_Series = document.querySelectorAll('.content-nav-tab[data-content="Laptops"] .gl');
+    var GS_Items = document.querySelectorAll('[data-tab-laptops="gs"]');
+    var GT_Items = document.querySelectorAll('[data-tab-laptops="gt"]');
+    var GL_Items = document.querySelectorAll('[data-tab-laptops="gl"]');
+    var GE_Items = document.querySelectorAll('[data-tab-laptops="ge"]');
 
-    tabs1.forEach((tab) => {
+    tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
-            tabs1.forEach((tab) => {
+            tabs.forEach((tab) => {
                 tab.classList.remove("active");
             })
             tab.classList.add("active");
-            var tabval = tab.getAttribute("data-content-tab");
 
-            if (tabval == "gs") {
-                GS_Series.forEach((gs) => {
+            var selectedTab = tab.getAttribute("data-content-tab");
+            console.log(selectedTab)
+
+            if (selectedTab == "gs") {
+                GS_Items.forEach((gs) => {
                     gs.style.display = "block";
                 })
+                GT_Items.forEach((gt) => {
+                    gt.style.display = "none";
+                })
+                GL_Items.forEach((gl) => {
+                    gl.style.display = "none";
+                })
+                GE_Items.forEach((ge) => {
+                    ge.style.display = "none";
+                })
             }
-            else if (tabval == "gt") {
-                GT_Series.forEach((gt) => {
+            else if (selectedTab == "gt") {
+                GT_Items.forEach((gt) => {
                     gt.style.display = "block";
                 })
-            }
-            else if (tabval == "gl") {
-                GL_Series.forEach((gl) => {
-                    gl.style.display = "block";
+                GS_Items.forEach((gs) => {
+                    gs.style.display = "none";
+                })
+                GL_Items.forEach((gl) => {
+                    gl.style.display = "none";
+                })
+                GE_Items.forEach((ge) => {
+                    ge.style.display = "none";
                 })
             }
-            else if (tabval == "gl") {
-                GL_Series.forEach((gl) => {
+            else if (selectedTab == "gl") {
+                GL_Items.forEach((gl) => {
                     gl.style.display = "block";
+                })
+                GT_Items.forEach((gt) => {
+                    gt.style.display = "none";
+                })
+                GS_Items.forEach((gs) => {
+                    gs.style.display = "none";
+                })
+                GE_Items.forEach((ge) => {
+                    ge.style.display = "none";
+                })
+            }
+            else if (selectedTab == "gl") {
+                GE_Items.forEach((ge) => {
+                    ge.style.display = "block";
+                })
+                GL_Items.forEach((gl) => {
+                    gl.style.display = "none";
+                })
+                GT_Items.forEach((gt) => {
+                    gt.style.display = "none";
+                })
+                GS_Items.forEach((gs) => {
+                    gs.style.display = "none";
                 })
             }
 
