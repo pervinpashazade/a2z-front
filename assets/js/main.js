@@ -58,16 +58,22 @@ $(document).ready(function () {
         }
     });
 
-    var tabs = document.querySelectorAll('.content-nav-tab li');
+    var tabs1 = document.querySelectorAll('.content-nav-tab[data-content="laptops"] li');
+    var tabs2 = document.querySelectorAll('.content-nav-tab[data-content="desktops"] li');
 
     var GS_Items = document.querySelectorAll('[data-tab-laptops="gs"]');
     var GT_Items = document.querySelectorAll('[data-tab-laptops="gt"]');
     var GL_Items = document.querySelectorAll('[data-tab-laptops="gl"]');
     var GE_Items = document.querySelectorAll('[data-tab-laptops="ge"]');
 
-    tabs.forEach((tab) => {
+    var INFINUTE_Items = document.querySelectorAll('[data-tab-desktops="infinute"]');
+    var TRIDEN_Items = document.querySelectorAll('[data-tab-desktops="triden"]');
+    var DESKTOPGL_Items = document.querySelectorAll('[data-tab-desktops="desktopgl"]');
+    var NIGHTBLADE_Items = document.querySelectorAll('[data-tab-desktops="nightblade"]');
+
+    tabs1.forEach((tab) => {
         tab.addEventListener("click", () => {
-            tabs.forEach((tab) => {
+            tabs1.forEach((tab) => {
                 tab.classList.remove("active");
             })
             tab.classList.add("active");
@@ -117,7 +123,7 @@ $(document).ready(function () {
                     ge.style.display = "none";
                 })
             }
-            else if (selectedTab == "gl") {
+            else if (selectedTab == "ge") {
                 GE_Items.forEach((ge) => {
                     ge.style.display = "block";
                 })
@@ -133,5 +139,77 @@ $(document).ready(function () {
             }
 
         })
+    });
+
+    tabs2.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            tabs2.forEach((tab) => {
+                tab.classList.remove("active");
+            })
+            tab.classList.add("active");
+
+            var selectedTab = tab.getAttribute("data-content-tab");
+            console.log(selectedTab)
+
+            if (selectedTab == "infinute") {
+                INFINUTE_Items.forEach((infinute) => {
+                    infinute.style.display = "block";
+                })
+                TRIDEN_Items.forEach((triden) => {
+                    triden.style.display = "none";
+                })
+                DESKTOPGL_Items.forEach((desktopgl) => {
+                    desktopgl.style.display = "none";
+                })
+                NIGHTBLADE_Items.forEach((nightblade) => {
+                    nightblade.style.display = "none";
+                })
+            }
+            else if (selectedTab == "triden") {
+                TRIDEN_Items.forEach((triden) => {
+                    triden.style.display = "block";
+                })
+                INFINUTE_Items.forEach((infinute) => {
+                    infinute.style.display = "none";
+                })
+                DESKTOPGL_Items.forEach((desktopgl) => {
+                    desktopgl.style.display = "none";
+                })
+                NIGHTBLADE_Items.forEach((nightblade) => {
+                    nightblade.style.display = "none";
+                })
+            }
+            else if (selectedTab == "desktopgl") {
+                DESKTOPGL_Items.forEach((desktopgl) => {
+                    desktopgl.style.display = "block";
+                })
+                TRIDEN_Items.forEach((triden) => {
+                    triden.style.display = "none";
+                })
+                INFINUTE_Items.forEach((infinute) => {
+                    infinute.style.display = "none";
+                })
+                NIGHTBLADE_Items.forEach((nightblade) => {
+                    nightblade.style.display = "none";
+                })
+            }
+            else if (selectedTab == "nightblade") {
+                NIGHTBLADE_Items.forEach((nightblade) => {
+                    nightblade.style.display = "block";
+                })
+                DESKTOPGL_Items.forEach((desktopgl) => {
+                    desktopgl.style.display = "none";
+                })
+                TRIDEN_Items.forEach((triden) => {
+                    triden.style.display = "none";
+                })
+                INFINUTE_Items.forEach((infinute) => {
+                    infinute.style.display = "none";
+                })
+            }
+
+        })
     })
+
+    
 });
