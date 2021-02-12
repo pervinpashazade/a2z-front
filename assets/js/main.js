@@ -42,65 +42,57 @@ $(document).ready(function () {
     });
 
     var contentItemsSlider = new Swiper('.swiper-container.content-items', {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 0,
-        freeMode: true,
+        // freeMode: true,
         breakpoints: {
             768: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 0,
             },
             1200: {
-                slidesPerView: 5,
+                slidesPerView: 6,
                 spaceBetween: 0,
                 touchRatio: 0
             }
         }
     });
 
-    // var contentItemsSlider = undefined;
-    // function initSwiper() {
-    //     var screenWidth = $(window).width();
-    //     if (screenWidth < 1200 && contentItemsSlider == undefined) {
-    //         // jQuery('.swiper_item_only_mobile').removeClass('col-md-6');
-    //         jQuery('.swiper_item_only_mobile').removeClass('col');
-    //         jQuery('.swiper_item_only_mobile').removeClass('p-0');
-    //         jQuery('.swiper_item_only_mobile').addClass('swiper-slide');
-    //         contentItemsSlider = new Swiper('.content-items', {
-    //             slidesPerView: 2,
-    //             spaceBetween: 0,
-    //             breakpoints: {
-    //                 768: {
-    //                     slidesPerView: 2,
-    //                     spaceBetween: 0,
-    //                 },
-    //                 1200: {
-    //                     slidesPerView: 5,
-    //                     spaceBetween: 0,
-    //                 }
-    //             }
-    //         });
-    //     } else if (screenWidth > 1199 && contentItemsSlider != undefined) {
-    //         contentItemsSlider.destroy();
-    //         contentItemsSlider = undefined;
-    //         // jQuery('.swiper-wrapper.content-items').removeAttr('style');
-    //         jQuery('.swiper-container.content-items').removeClass('swiper-container');
-    //         // jQuery('.swiper-container.content-items .swiper-wrapper').removeClass('swiper-wrapper');
-    //         jQuery('.content-items .swiper-slide').removeAttr('role');
-    //         jQuery('.content-items .swiper-slide').removeAttr('aria-label');
-    //         jQuery('.content-items .swiper-slide').removeClass('swiper-slide');
-    //         // jQuery('.swiper_item_only_mobile').addClass('col-md-6');
-    //         jQuery('.swiper_item_only_mobile').addClass('col');
-    //         jQuery('.swiper_item_only_mobile').addClass('p-0');
-    //     }
-    // }
+    var tabs1 = document.querySelectorAll(".content-nav-tab li");
 
-    // //Swiper plugin initialization
-    // initSwiper();
+    var GS_Series = document.querySelectorAll('.content-nav-tab[data-content="Laptops"] .gs');
+    var GT_Series = document.querySelectorAll('.content-nav-tab[data-content="Laptops"] .gt');
+    var GL_Series = document.querySelectorAll('.content-nav-tab[data-content="Laptops"] .gl');
 
-    // //Swiper plugin initialization on window resize
-    // $(window).on('resize', function () {
-    //     initSwiper();
-    // });
+    tabs1.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            tabs1.forEach((tab) => {
+                tab.classList.remove("active");
+            })
+            tab.classList.add("active");
+            var tabval = tab.getAttribute("data-content-tab");
 
+            if (tabval == "gs") {
+                GS_Series.forEach((gs) => {
+                    gs.style.display = "block";
+                })
+            }
+            else if (tabval == "gt") {
+                GT_Series.forEach((gt) => {
+                    gt.style.display = "block";
+                })
+            }
+            else if (tabval == "gl") {
+                GL_Series.forEach((gl) => {
+                    gl.style.display = "block";
+                })
+            }
+            else if (tabval == "gl") {
+                GL_Series.forEach((gl) => {
+                    gl.style.display = "block";
+                })
+            }
+
+        })
+    })
 });

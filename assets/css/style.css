@@ -267,6 +267,10 @@ ul {
     }
 }
 
+.h-initial{
+    height: initial !important;
+}
+
 .flex-end {
     display: flex;
     align-items: center;
@@ -1235,9 +1239,9 @@ section#content {
     .swiper-container.content-items {
         overflow: inherit !important;
     }
-    .swiper-container.content-items .swiper-slide {
+    /* .swiper-container.content-items .swiper-slide {
         width: 45% !important;
-    }
+    } */
 }
 
 @media (min-width: 768px) {
@@ -1284,6 +1288,51 @@ section#content {
 }
 
 /*==============================
+	Content Nav Tab
+==============================*/
+
+.content-nav-tab {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #838383;
+    padding-top: 5px;
+
+}
+
+.content-nav-tab .nav-item {
+    display: inline-block;
+    margin-right: 16px;
+    padding-bottom: 14px;
+
+}
+
+.content-nav-tab .nav-item span {
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);    
+}
+
+.content-nav-tab .nav-item.active span {
+    color: #000;
+    border-bottom: 2px solid #0156FF;
+}
+
+@media (min-width: 728px) {
+    .content-nav-tab .nav-item {
+        margin-right: 19px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-nav-tab {
+        font-size: 16px;
+    }
+    .content-nav-tab .nav-item {
+        margin-right: 25px;
+    }
+}
+
+/*==============================
 	Nav Tab (customized)
 ==============================*/
 
@@ -1292,11 +1341,11 @@ section#content {
     line-height: 20px;
     font-weight: bold;
     border: none;
-    margin-bottom: 14px;
 }
 
 .custom-nav-tab .nav-item {
     margin-right: 16px;
+    margin-bottom: 14px;
 }
 
 .custom-nav-tab .nav-item .nav-link {
