@@ -226,4 +226,15 @@ $(document).ready(function () {
         searchInput.classList.toggle('active')
     })
 
+
+    var mobileNavWrapper = document.querySelector('.mobile-nav-wrapper');
+    var openMobileNavBtn = document.querySelector('.mobile__nav_btn');
+    var closeMobileNavBtn = document.querySelector('.close__mobile-nav-menu');
+
+    openMobileNavBtn.addEventListener('click', function () {
+        mobileNavWrapper.classList.add('active')
+    })
+    closeMobileNavBtn.addEventListener('click', function () {
+        mobileNavWrapper.classList.remove('active')
+    })
 });
