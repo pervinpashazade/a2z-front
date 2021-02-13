@@ -243,6 +243,10 @@ ul {
     color: #CCCCCC;
 }
 
+.color-8 {
+    color: #000;
+}
+
 /*==============================
 	Shadow
 ==============================*/
@@ -702,6 +706,10 @@ section#home-slider {
     box-shadow: 0px 5px 15px rgb(0 0 0 / 14%);
 }
 
+.dropdown-menu ul {
+    padding: 0px;
+}
+
 .dropdown-menu ul li {
     margin: 0;
     display: block;
@@ -719,11 +727,7 @@ section#home-slider {
     left: -146px !important;
 }
 
-.dropdown-menu.dropdown__profile ul {
-    padding: 5px 0px;
-}
-
-.dropdown-menu.dropdown__profile::after {
+.dropdown-menu::after {
     content: '';
     position: absolute;
     top: -10px;
@@ -733,6 +737,54 @@ section#home-slider {
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-bottom: 20px solid #fff;
+}
+
+.dropdown-menu.dropdown__hours {
+    width: 270px;
+    top: 26px !important;
+    left: -65px !important;
+    line-height: 18px;
+}
+
+.dropdown-menu.dropdown__hours::after {
+    top: -7px !important;
+    left: 192px !important;
+}
+
+.dropdown-menu.dropdown__hours ul {
+}
+
+.dropdown-menu.dropdown__hours ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    border-top: 1px solid #ccc;
+}
+
+.dropdown-menu.dropdown__hours ul li:first-child {
+    border-top: none;
+}
+
+.dropdown-menu.dropdown__hours ul li.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dropdown-menu.dropdown__hours ul li.wrapper div span {
+    display: inline-block;
+}
+
+.dropdown-menu.dropdown__hours ul li.wrapper span:first-child {
+    margin-right: 20px
+}
+
+.dropdown-menu.dropdown__hours ul li a {
+    color: #0156FF;
+}
+
+.dropdown-menu.dropdown__hours ul:last-child {
+    border: none !important;
 }
 
 @media (min-width: 992px) {
