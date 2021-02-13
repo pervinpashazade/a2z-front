@@ -386,6 +386,34 @@ ul {
     padding: 11px 0px;
 }
 
+@media only screen and (min-width: 992px) {
+    ::placeholder {
+        font-size: 14px;
+    }
+    .search-input {
+        width: 99%;
+        background-color: #EBEBEB;
+        margin-top: 16px;
+        margin-bottom: 12px;
+        padding: 4px 25px;
+        position: absolute;
+        top: -100;
+        left: 0;
+    }
+    .search-input.active {
+        top: 0;
+    }
+    .search-input input[type='text'] {
+        padding: 11px 15px;
+    }
+    .search-input button[type='submit'] {
+        margin-right: 8px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
+
 /*==============================
 	Button
 ==============================*/
@@ -521,6 +549,8 @@ ul {
 
 .header-nav {
     height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .header-nav ul {
@@ -548,7 +578,8 @@ ul {
 
 .header-tools ul li {
     display: inline-block;
-    margin-right: 25px;
+    margin-right: 24px;
+    cursor: pointer;
 }
 
 .header__user-avatar {

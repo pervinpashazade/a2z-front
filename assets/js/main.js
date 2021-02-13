@@ -211,5 +211,19 @@ $(document).ready(function () {
         })
     })
 
-    
+    var showSearchboxBtn = document.querySelector('.show__searchbox_btn');
+    var hideSearchboxBtn = document.querySelector('.cancel__search');
+    var searchInput = document.querySelector('.search-input');
+
+    showSearchboxBtn.addEventListener('click', function () {
+        showSearchboxBtn.classList.toggle('d-none')
+        hideSearchboxBtn.classList.toggle('d-none')
+        searchInput.classList.toggle('active')
+    });
+    hideSearchboxBtn.addEventListener('click', function () {
+        showSearchboxBtn.classList.toggle('d-none')
+        hideSearchboxBtn.classList.toggle('d-none')
+        searchInput.classList.toggle('active')
+    })
+
 });
