@@ -1,4 +1,35 @@
 /*==============================
+	***style.css description***
+
+    1. Common styles
+    2. Fonts
+    3. Colors
+    4. Shadow
+    5. Custom design (classes)
+    6. Shopping Card
+    7. Input
+    8. Button
+    9. Bootstrap Accordion
+    10. Header
+    11. Mobile Nav Menu
+    12. Home Slider
+    13. Bootstrap custom dropdown
+    14. Section
+    15. Product Slider
+    16. Product Card
+    17. Banner
+    18. Content
+    19. Content Nav Tab
+    20. Nav Tab (customized)
+    21. Grid for 7 col
+    22. Brands
+    23. Features Card
+    24. Instagram Posts
+    25. Testimonial
+    26. Footer
+==============================*/
+
+/*==============================
 	Common styles
 ==============================*/
 
@@ -202,10 +233,6 @@ ul {
 }
 
 /*==============================
-	Hovers
-==============================*/
-
-/*==============================
 	Custom design
 ==============================*/
 
@@ -221,10 +248,11 @@ ul {
     }
 }
 
-a.tel-number{
+a.tel-number {
     color: #0156FF !important;
 }
-a.mail-address{
+
+a.mail-address {
     color: #0156FF !important;
 }
 
@@ -437,8 +465,6 @@ a.mail-address{
 /*==============================
 	Bootstrap Accordion
 ==============================*/
-
-.custom-accordion {}
 
 .custom-accordion .card {
     background-color: transparent;
@@ -787,6 +813,9 @@ section#home-slider {
 .swiper-button-next::after, .swiper-button-prev::after {
     font-size: 7px;
     font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 14px;
 }
 
 .swiper-button-next::after {
@@ -1129,11 +1158,6 @@ section#product-slider {
 /*==============================
 	Product Card
 ==============================*/
-
-/* .product__slider_wrapper {
-    position: relative;
-    min-height: 329px;
-} */
 
 .product-card {
     width: 100%;
@@ -1587,8 +1611,6 @@ section#content {
 .col-half-offset {
     margin-left: 4.166666667%
 }
-
-.content-items {}
 
 .swiper-container.content-items {
     overflow: hidden;
@@ -2102,8 +2124,6 @@ ul.footer__nav-list li a {
     font-size: 13px;
     line-height: 18px;
 }
-
-@media (min-width: 768px) {}
 
 @media (min-width: 1200px) {
     .footer {
