@@ -237,4 +237,5 @@ $(document).ready(function () {
     closeMobileNavBtn.addEventListener('click', function () {
         mobileNavWrapper.classList.remove('active')
     })
+
 });
